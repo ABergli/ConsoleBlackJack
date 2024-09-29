@@ -15,6 +15,7 @@ namespace ConsoleBlackJack {
 
     internal class Program {
         public const int RoundLimitForSave = 10;
+        public const int MaxFunds = 5000; 
 
         static void Main(string[] args) {
             // Load existing game stats
@@ -53,7 +54,7 @@ namespace ConsoleBlackJack {
         private static string StartGame(List<GameStats> allStats, string n) {
             // Game "table" setup
             Player dealer = new Player("Dealer");
-            Player human = new Player(5000); // fund limit
+            Player human = new Player(MaxFunds);
             string playerName = n;
             Deck deck;
             int deckNumber = 0, bet = 0;
