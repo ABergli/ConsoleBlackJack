@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace ConsoleBlackJack {
 
-    /* TODO: double functionality
+    /* TODO: 
      *       split functionality
-     *          several hands
+     *          several hands 
      *       insurance functionality
      *       topscore based on number of decks used    
      * 
