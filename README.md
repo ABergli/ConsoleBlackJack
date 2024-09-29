@@ -1,4 +1,4 @@
-# BreadcrumbsConsoleBlackJack
+# ConsoleBlackJack
 
 [![Run C# Program](https://github.com/ABergli/ConsoleBlackJack/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ABergli/ConsoleBlackJack/actions/workflows/dotnet.yml)
 
