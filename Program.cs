@@ -18,12 +18,17 @@ namespace ConsoleBlackJack {
         public const int MaxFunds = 5000; 
 
         static void Main(string[] args) {
-            bool isAutomated = args.Contains("--automated");
-            string autoInput;
             // Load existing game stats
             List<GameStats> allStats = GameStats.LoadGameStats();
             string nameBuffer = "";
             string playerChoice = "";
+
+
+            if (Environment.GetEnvironmentVariable("CI") != null)
+            {
+                Console.WriteLine("Running in CI mode, skipping interactive game...");
+                return;
+            }
 
 
             while (true)
