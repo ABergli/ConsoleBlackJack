@@ -18,9 +18,12 @@ namespace ConsoleBlackJack {
         public const int MaxFunds = 5000; 
 
         static void Main(string[] args) {
+            bool isAutomated = args.Contains("--automated");
+            string autoInput;
             // Load existing game stats
             List<GameStats> allStats = GameStats.LoadGameStats();
             string nameBuffer = "";
+            string playerChoice = "";
 
 
             while (true)
@@ -31,9 +34,17 @@ namespace ConsoleBlackJack {
                 Console.WriteLine("2: Start Game");
                 Console.WriteLine("3: Exit");
 
-                string choice = Console.ReadLine();
+                if ( isAutomated)
+                {   //just end the game if automated
+                    autoInput = "3"; 
+                } else
+                {
+                    playerChoice = Console.ReadLine();
+                }
 
-                switch (choice)
+                
+
+                switch (playerChoice)
                 {
                     case "1":
                         GameStats.DisplayTopScore(allStats);
