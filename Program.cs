@@ -39,16 +39,8 @@ namespace ConsoleBlackJack {
                 Console.WriteLine("2: Start Game");
                 Console.WriteLine("3: Exit");
 
-                if ( isAutomated)
-                {   //just end the game if automated
-                    autoInput = "3"; 
-                } else
-                {
-                    playerChoice = Console.ReadLine();
-                }
 
-                
-
+                playerChoice = Console.ReadLine();
                 switch (playerChoice)
                 {
                     case "1":
